@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
-import styles from './css/style';
+import styles from './css/senhaCss';
 import { Link } from 'expo-router';
 
-export default function Login() {
+export default function Senha() {
   return (
     <View style={styles.container}>
       <View>
@@ -12,16 +12,13 @@ export default function Login() {
       <View style={styles.form}>
         <Text style={styles.esquerda}>Login</Text>
         <TextInput placeholder='Insira seu CPF' style={styles.input} />
-        <Text style={styles.esquerda}>Senha</Text>
+        <Text style={styles.esquerda}>Crie uma nova senha</Text>
         <TextInput placeholder='Insira sua senha' style={styles.input} />
-        <View style={styles.direita}>
-          <Link href={'/cadastrar'}>Cadastrar</Link>
-          <Link href={'/senha'}>Esqueci a senha</Link>
-        </View>
+      
       </View>
       <View style={styles.btn}>
-        <Link href={''} >
-          <Text style={{color:'white'}}>ENTRAR</Text>
+        <Link href={'/login'} >
+          <Text style={{color:'white'}}>SALVAR</Text>
         </Link>
       </View>
       <StatusBar style="auto" />
